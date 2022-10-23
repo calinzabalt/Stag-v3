@@ -1,0 +1,22 @@
+form .item{
+    padding-bottom: 15px;
+}
+
+form .item textarea{
+    width: 100% !important;
+    padding: 10px;
+}
+
+form .item .MuiFormControl-root{
+    width: 100%;
+}
+
+form .item.date input{
+    width: 100%;
+    height: 56px;
+}
+
+.create_project form{
+    max-width: 500px;
+    width: 100%;
+}

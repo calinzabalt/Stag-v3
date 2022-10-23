@@ -1,0 +1,26 @@
+.signup{
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.signup .title{
+    text-align: center;
+}
+
+.signup .MuiFormControl-root{
+    width: 100%;
+}
+
+.signup input{
+    width: 100%;
+}
+
+.signup .item{
+    padding-bottom: 15px;
+}
+
+.signup .item.profile .MuiAvatar-root{
+    margin-right: 10px;
+}

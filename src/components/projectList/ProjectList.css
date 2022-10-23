@@ -1,0 +1,54 @@
+.projects_listing{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -10px;
+    padding-top: 20px;
+}
+.projects_listing a{
+    text-decoration: none;
+    padding: 10px;
+    flex: 0 0 33.33%
+}
+
+.projects_listing ul li{
+    list-style: none;
+}
+
+.assigned_to{
+    padding-top: 10px;
+    margin: 0 -5px;
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+}
+
+.assigned_to ul li{
+    padding: 5px;
+    display: inline-block;
+}
+
+.max_height{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.due_date{
+    padding-top: 10px;
+    display: block;
+}
+
+.projects_listing a > div{
+    height: 100%;
+}
+
+.projects_listing a button{
+    height: 100%;
+}
+
+.projects_listing a button .MuiCardContent-root{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}

@@ -1,0 +1,78 @@
+.project_details{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -10px;
+}
+
+.project_details .project_summary{
+    flex: 0 0 50%;
+    padding: 0 10px;
+}
+
+.project_details .project_comments{
+    flex: 0 0 50%;
+    padding: 0 10px;
+}
+
+.project_comments ul{
+    padding-bottom: 20px;
+}
+.project_comments ul li{
+    list-style: none;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.project_comments h5{
+    padding-bottom: 20px;
+}
+
+.avatar_and_name{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.avatar_and_name span{
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.comment_date{
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+}
+
+.project_summary .created_by{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+.project_summary .dute_date{
+    padding-bottom: 10px;
+}
+
+.project_summary .assigned_users_content{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -5px;
+    padding-top: 10px;
+}
+
+.project_summary .assigned_users{
+    padding-top: 20px;
+}
+
+.project_summary .assigned_users_content .item{
+    padding: 0 5px;
+}
+
+.mark_as_complete{
+    padding-top: 20px;
+}

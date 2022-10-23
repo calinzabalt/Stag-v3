@@ -1,0 +1,14 @@
+.user_item{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.user_item .user_name{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.padding_top{
+    padding-top: 60px;
+}
