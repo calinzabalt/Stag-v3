@@ -16,7 +16,7 @@ export default function ProjectSummary({ project }) {
     const handleClick = (e) => {
         e.preventDefault();
         deleteDocument(project.id)
-        history.push('/dashboard')
+        history.push('/')
     }
 
     return (

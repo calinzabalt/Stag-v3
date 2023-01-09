@@ -1,0 +1,12 @@
+.terms_content .content p{
+    padding-bottom: 20px;
+} 
+
+.terms_content .content p strong{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.terms_content .content p a{
+    color: initial;
+}

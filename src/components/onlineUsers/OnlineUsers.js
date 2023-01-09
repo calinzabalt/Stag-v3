@@ -1,5 +1,4 @@
-import * as React from "react"
-import { useState } from "react"
+import React, { useEffect, useState } from 'react';
 import "./OnlineUsers.css"
 
 import { useCollection } from "../../hooks/useCollection"
@@ -13,8 +12,9 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
-import { Link } from 'react-router-dom'
 
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -26,6 +26,16 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function OnlineUsers(){
     const { error, documents } = useCollection('users')
+    const user = firebase.auth().currentUser
+    const userRef = firebase.firestore().collection('users').doc(user.uid)
+    const [userData, setUserData] = useState(null)
+
+    useEffect(() => {
+        userRef.onSnapshot(doc => {
+          setUserData(doc.data());
+        });
+      }, []);
+        
     const [state, setState] = useState({
         right: false
     })
@@ -53,23 +63,30 @@ export default function OnlineUsers(){
                 <ListItem>
                     <ListItemText>
                         {error && <div className="error">{error}</div>}
-                        {documents && documents.map(user => (
-                            <div key={user.id} className="user_item">
-                                {!user.online &&
-                                    <Avatar src={user.photoURL}/>
-                                }
-                                {user.online &&
-                                    <StyledBadge
+                        {documents && documents.map(user => {
+                            if (user && user.invitations && userData && userData.invitations) {
+                                if (userData.invitations.some(invitation => invitation.team === user.invitations[0].team && user.invitations[0].options.accept === 'yes')) {
+                                return (
+                                    <div key={user.id} className="user_item">
+                                    {!user.online &&
+                                        <Avatar src={user.photoURL} />
+                                    }
+                                    {user.online &&
+                                        <StyledBadge
                                         overlap="circular"
                                         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                                         variant="dot"
                                         >
-                                        <Avatar src={user.photoURL}/>
-                                    </StyledBadge>
+                                        <Avatar src={user.photoURL} />
+                                        </StyledBadge>
+                                    }
+                                    <span className="user_name">{user.displayName}</span>
+                                    </div>
+                                )
                                 }
-                                <span className="user_name">{user.displayName}</span>
-                            </div>
-                        ))}
+                            }
+                            return null;
+                        })}
                     </ListItemText>
                 </ListItem>
             </List>

@@ -1,0 +1,21 @@
+.Single_team .details label{
+    display: block;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.Single_team .details .item{
+    padding-bottom: 20px;
+}
+
+.Single_team .members ul li{
+    list-style: none;
+    display: block;
+}
+
+.invite_people{
+    max-width: 300px;
+    width: 100%;
+    padding-top: 40px;
+}

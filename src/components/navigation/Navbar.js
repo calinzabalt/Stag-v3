@@ -8,7 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
@@ -29,6 +28,7 @@ import ListItemText from "@mui/material/ListItemText";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import CreateIcon from '@mui/icons-material/Create';
 import GroupIcon from '@mui/icons-material/Group';
+import WorkspacesIcon from '@mui/icons-material/Workspaces';
 
 import Avatar from '../avatar/Avatar'
 import OnlineUsers from '../onlineUsers/OnlineUsers';
@@ -158,7 +158,7 @@ const Navbar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/dashboard"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -227,7 +227,7 @@ const Navbar = () => {
               {user &&
               <Button sx={{ my: 2, color: 'white', display: 'block' }}>
                 <Link
-                    to="/dashboard"
+                    to="/"
                     key="1"
                 >
                     Dashboard
@@ -262,6 +262,7 @@ const Navbar = () => {
               </IconButton>
             </Tooltip>
             <Menu
+              className='user_settings'
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -277,13 +278,19 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
+              <MenuItem key="3">
+                <Link
+                      to="/invitations"
+                  >
+                      Invitations
+                  </Link>
+              </MenuItem>
               {!isPending && <MenuItem key="1" onClick={logout}>
                 <Typography textAlign="center">Logout</Typography>
               </MenuItem> }
-              {isPending && <MenuItem key="1">
+              {isPending && <MenuItem key="2">
                 <Typography textAlign="center">Logging out...</Typography>
               </MenuItem> }
-
             </Menu>
           </Box>}
         </Toolbar>
@@ -301,7 +308,7 @@ const Navbar = () => {
           </DrawerHeader>
           <List>
               <Link
-                  to="/dashboard"
+                  to="/"
                   key="1"
               >
                 <ListItem disablePadding sx={{ display: "block" }}>
@@ -347,6 +354,31 @@ const Navbar = () => {
                       <CreateIcon/>
                     </ListItemIcon>
                     <ListItemText primary='Create Project' sx={{ opacity: open ? 1 : 0 }} />
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+              <Link
+                  to="/teams"
+                  key="3"
+              >
+                <ListItem disablePadding sx={{ display: "block" }}>
+                  <ListItemButton
+                    sx={{
+                      minHeight: 48,
+                      justifyContent: open ? "initial" : "center",
+                      px: 2.5
+                    }}
+                  >
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: open ? 3 : "auto",
+                        justifyContent: "center"
+                      }}
+                    >
+                      <WorkspacesIcon/>
+                    </ListItemIcon>
+                    <ListItemText primary='Teams' sx={{ opacity: open ? 1 : 0 }} />
                   </ListItemButton>
                 </ListItem>
               </Link>

@@ -1,0 +1,28 @@
+[debug] [2022-12-12T18:38:16.179Z] ----------------------------------------------------------------------
+[debug] [2022-12-12T18:38:16.181Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\calin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-12-12T18:38:16.181Z] CLI Version:   11.11.0
+[debug] [2022-12-12T18:38:16.182Z] Platform:      win32
+[debug] [2022-12-12T18:38:16.182Z] Node Version:  v16.16.0
+[debug] [2022-12-12T18:38:16.185Z] Time:          Mon Dec 12 2022 20:38:16 GMT+0200 (Eastern European Standard Time)
+[debug] [2022-12-12T18:38:16.185Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-12T18:38:16.189Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-12T18:38:16.273Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-12T18:38:16.274Z] > authorizing via signed-in user (calinzabalt@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\calin\Desktop\Stag-v3
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2022-12-12T18:38:16.611Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-12T18:38:16.612Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}

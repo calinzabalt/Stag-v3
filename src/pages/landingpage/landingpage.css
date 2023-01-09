@@ -1,0 +1,239 @@
+.landing_header{
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+
+.container.landing{
+    max-width: 1220px;
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header_logo{
+    max-width: 120px;
+}
+
+.header_section{
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    background-image: url("../../assets/people_managment.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: -118px;
+    position: relative;
+}
+
+.header_section::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.landing .section_title h1{
+    font-size: 68px;
+    color: #fff;
+}
+
+.landing .section_description p{
+    color: #fff;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.landing .call_to_action button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.landing .container{
+    position: relative;
+    z-index: 99;
+}
+
+.global .section_title h2{
+    font-size: 36px;
+    padding-bottom: 20px;
+    color: #171717;
+}
+
+.global .section_description p{
+    font-size: 18px;
+    color: #171717;
+}
+
+.global .section_description p button{
+    background: transparent;
+    color: #171717;
+    border: none;
+    font-size: 18px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.global .section_description{
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.what_we_offer{
+    text-align: center;
+    padding: 120px 0px
+}
+
+.what_we_offer .box{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 80px 0px;
+    align-items: center;
+}
+
+.what_we_offer .box .left{
+    flex: 0 0 60%;
+    padding-right: 60px;
+}
+
+.what_we_offer .box .right{
+    flex: 0 0 40%;
+    text-align: left;
+}
+
+.what_we_offer .box .box_title{
+    font-size: 28px;
+    font-weight: 500;
+    color: #171717;
+    padding-bottom: 15px;
+}
+
+.what_we_offer .box:nth-child(4) .left,
+.what_we_offer .box:nth-child(2) .left{
+    order: 2;
+    padding-right: 0;
+    padding-left: 60px;
+}
+
+.new_releases{
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+.new_releases .calendar{
+    padding-top: 20px;
+}
+
+.newsletter{
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+.newsletter_form{
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.newsletter_form label{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.newsletter_form input{
+    height: 45px;
+    border: 1px solid #bbbbbb;
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 15px;
+}
+
+.newsletter_form .submit input{
+    border: none;
+    font-size: 14px;
+    background-color: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.landing_footer{
+    background-color: #1976d2;
+    padding: 100px 0px;
+    margin-top: 100px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .success_subscribed{
+    color: green;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .error_subscribed{
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .landing_footer .row{
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .landing_footer .col{
+    flex: 0 0 50%;
+  }
+
+  .landing_footer .col:nth-child(2){
+    text-align: right;
+    color: #fff;
+  }
+
+  .landing_footer ul li{
+    list-style: none;
+    padding-bottom: 5px;
+  }
+
+  .landing_footer ul li a{
+    color: #fff;
+    text-decoration: none;
+  }

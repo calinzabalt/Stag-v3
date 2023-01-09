@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
 
-const filterList = ['all', 'mine', 'development', 'design', 'copyright']
+const filterList = ['all', 'mine', 'development', 'design', 'copyright', 'marketing']
 
 export default function ProjectFilter({ currentFilter, changeFilter }) {
     const handleClick = (newFilter) => {

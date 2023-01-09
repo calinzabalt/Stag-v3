@@ -1,10 +1,10 @@
 import './Signup.css'
 import { useState } from 'react'
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button'
+import IconButton from '@mui/material/IconButton'
+import PhotoCamera from '@mui/icons-material/PhotoCamera'
+import Avatar from '@mui/material/Avatar'
 import { useSignup } from '../../hooks/useSignup'
 
 export default function Signup() {
@@ -28,7 +28,7 @@ export default function Signup() {
         reader.addEventListener("load", () => {
           setImgData(reader.result);
         });
-        reader.readAsDataURL(e.target.files[0]);
+        reader.readAsDataURL(e.target.files[0])
 
         if(!selected) {
             setThumbnailError('Please select a file')
@@ -87,7 +87,7 @@ export default function Signup() {
             {thumbnailError && <div className='error'>{thumbnailError}</div>}
             <IconButton color="primary" aria-label="upload picture" component="label">
                 {thumbnail && <Avatar src={imgData} alt={thumbnail.name}/>}
-                <input hidden type="file" onChange={handleFileChange} />
+                <input required hidden type="file" onChange={handleFileChange} />
                 <PhotoCamera />
             </IconButton>
             </div>
